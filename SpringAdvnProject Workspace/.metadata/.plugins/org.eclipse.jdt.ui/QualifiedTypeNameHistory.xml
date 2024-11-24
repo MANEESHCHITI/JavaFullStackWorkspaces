@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.mysql.cj.jdbc.Driver"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.maneesh.spbAdress.entity.Address"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.service.MyService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.config.ConfigurableBeanFactory"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.scope.SingletonBean"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.scope.ProtoTypeBean"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.value.ValueAnnotationDemo"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.propertysource.PropertySourceDemo"/>
+    <fullyQualifiedTypeName name="com.javaguides.ComponentAnnotaion01.beans.Book"/>
+    <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+</qualifiedTypeNameHistroy>

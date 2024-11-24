@@ -1,0 +1,11 @@
+package com.javaguides.ComponentAnnotaion01.lazy;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EagerLoaderr {
+
+	public EagerLoaderr() {
+		System.out.println("EagerLoaderr");
+	}
+}

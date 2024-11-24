@@ -1,0 +1,19 @@
+package Collections;
+
+public class Pr12 {
+
+	public static void main(String[] args) {
+
+	String s="hi";
+	String ss=s;
+	s.concat("hlo");
+	//s=s.concat("this");
+	//s=s.concat("hru");
+	System.out.println(s);
+	System.out.println(ss);
+	
+	
+
+	}
+
+}

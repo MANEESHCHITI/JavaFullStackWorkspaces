@@ -1,0 +1,68 @@
+package com.react01.fetch.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin("*")
+public class ReactController {
+	
+//	@RequestMapping
+//	String helloSpringBoot() {
+//	String str = "Hello Spring Boot Application !!";
+//	return str;
+//	}
+	
+	@GetMapping("getSring")
+	public String getString() {
+		return "HI Maneesh";
+	}
+	
+	@GetMapping("hihello")
+	public String hello() {
+	return "Hello Spring Boot app or Micro Sercices !!";
+	}
+
+	@GetMapping("getItems")
+	public String getItems() {
+		return "[\\r\\n\" + \" {\\r\\n\" + \" \\\"id\\\": 0,\\r\\n\" + \" \\\"name\\\":\r\n"
+				+ "\\\"Why React?\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"content\\\": [\\r\\n\" + \" \\\"React is extremely\r\n"
+				+ "popular\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"It makes building complex, interactive UIs a\r\n"
+				+ "breeze\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"It's powerful & flexible\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"It has a very active and versatile\r\n"
+				+ "ecosystem\\\"\\r\\n\" + \" ]\\r\\n\" + \" },\\r\\n\"\r\n"
+				+ "+ \" {\\r\\n\" + \" \\\"id\\\": 1,\\r\\n\" + \" \\\"name\\\": \\\"Core\r\n"
+				+ "Features\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"content\\\": [\\r\\n\" + \" \\\"Components, JSX &\r\n"
+				+ "Props\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"State\\\",\\r\\n\" + \" \\\"Hooks (e.g.,\r\n"
+				+ "useEffect())\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"Dynamic rendering\\\"\\r\\n\" + \" ]\\r\\n\" + \"\r\n"
+				+ "},\\r\\n\" + \" {\\r\\n\"\r\n"
+				+ "+ \" \\\"id\\\": 2,\\r\\n\" + \" \\\"name\\\": \\\"Related\r\n"
+				+ "Resources\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"content\\\": [\\r\\n\" + \" \\\"Official web page\r\n"
+				+ "(react.dev)\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"Next.js (Fullstack framework)\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"React Native (build native mobile apps with\r\n"
+				+ "React)\\\"\\r\\n\" + \" ]\\r\\n\"\r\n"
+				+ "+ \" },\\r\\n\" + \" {\\r\\n\" + \" \\\"id\\\": 3,\\r\\n\" + \"\r\n"
+				+ "\\\"name\\\": \\\"Java\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"content\\\": [\\r\\n\" + \" \\\"Java is Simple\\\",\\r\\n\"\r\n"
+				+ "+ \" \\\"Java id Robust\\\",\\r\\n\" + \" \\\"Java is\r\n"
+				+ "Secure\\\"\\r\\n\" + \" ]\\r\\n\"\r\n"
+				+ "+ \" }\\r\\n\" + \"] ";
+		
+	}
+	
+	 @GetMapping("employee")
+	 Employee getEmployee() {
+	 return new Employee("Rahul", "Reddy ");
+	 }
+
+
+}

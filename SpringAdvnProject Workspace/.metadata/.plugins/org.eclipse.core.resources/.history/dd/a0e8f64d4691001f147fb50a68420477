@@ -1,0 +1,146 @@
+/* here in this by default component annotation has decaptalized first letter
+ *  @Component("pizzaController") in getBean we can call by class without double quotes
+ *  and without typecasting .if we call it by getBean("pizaControler") we give double quotes and typecasted
+ *  if we use other custom mapping @Component("pizza") we take the same in get bean.
+ *  Instead of taking var context we can take ApplicationContext  context .
+ *  
+ *   flow : maven is imported without any dependency inbuilt is enough like spring-boot-starter(we can check inBUilt in spring Initializer
+ *   As the @Component creates obj like bean  so we can access this method in run)*/
+
+
+
+/*
+ * package com.javaguides.ComponentAnnotaion01.controller;
+ * 
+ * import org.springframework.stereotype.Component;
+ * 
+ * @Component public class PizzaController {
+ * 
+ * public String getPizza() { return "hot pizza";
+ * 
+ * }
+ * 
+ * }
+ */
+
+//AutowiredAnnotation
+
+
+/*this is for autowired annotation as this annotation
+ *  is used to inject the bean automatically means i created one service package 
+ * under main root packagge, in this package i created class of VegPizza and returns spring and 
+ * used @COmponent for creation of bean.In 
+ * this present class i used @Component 
+ * (to create bean ie old) and created variable og vegpizza of datatype 
+ * class and i injected bean in three ways like constructor,
+ *   setter injection,field injection there we use @autowired to 
+ *   inject the bean(VegPizza) automatically. for the field injection i we use @Autowired before variable.
+*/
+//package com.javaguides.ComponentAnnotaion01.controller;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Component;
+//
+//import com.javaguides.ComponentAnnotaion01.service.VegPizza;
+//
+//@Component
+//public class PizzaController {
+//	
+//	private VegPizza vegpizza;
+//	
+//	//by comstructor injection
+////		
+////		@Autowired
+////		public void VegPizza(VegPizza vegpizza) {
+////			this.vegpizza=vegpizza;
+////		}
+//	
+//	//by setter injection
+//	
+//			//	@Autowired
+//			//	public void setVegPizza(VegPizza vegpizza) {
+//			//		this.vegpizza=vegpizza;
+//			//	}
+//	
+//	//field injection nothing but @Autowired for variable top itself 
+//	
+//	
+//	public String getPizza() {
+//		return vegpizza.getPizza();
+//		
+//	}
+//
+//}
+
+
+//Qualifier Annotation
+
+/*this is Qualifier annotation in this i created one Pizza interface
+ * and two,NOnVegPizza,VegPizza classes these two classes implements
+ *  interface Pizza. for both classes i used @componnet to create bean and in this
+ *  present page i used interface as variable instead of classes because of
+ *   loosley coupled means dynamically changing classes. as i used autowired annotaion
+ *    with constructor injection to inject bean .at now situation there is two beans to 
+ *    inject here because of @Autowired so here it get ambiquety to overcome
+ *     this we used @Quakifier in constructor with the default id of component for classes
+ *      by this we can get changed the classes*/
+
+//package com.javaguides.ComponentAnnotaion01.controller;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Qualifier;
+//import org.springframework.stereotype.Component;
+//
+//import com.javaguides.ComponentAnnotaion01.service.Pizza;
+//
+//@Component
+//public class PizzaController {
+//	
+//	private Pizza pizza; //( we use interface here to loosely coupled means dynamic changing of implemented classes)
+//	
+//	//by comstructor injection
+//		
+//		@Autowired						//this below nonVegPizza is the component class default id
+//											
+//		public void VegPizza(@Qualifier("nonVegPizza") Pizza pizza) {
+//			this.pizza=pizza;
+//		}
+//
+//	public String getPizza() {
+//		return pizza.getPizza();
+//		
+//	}
+//
+//}
+
+//Primary Annotation
+
+package com.javaguides.ComponentAnnotaion01.controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import com.javaguides.ComponentAnnotaion01.service.Pizza;
+
+@Component
+public class PizzaController {
+	
+	private Pizza pizza; //( we use interface here to loosely coupled means dynamic changing of implemented classes)
+	
+	//by comstructor injection
+		
+		@Autowired						//this below nonVegPizza is the component class default id
+											
+		public void VegPizza(Pizza pizza) {
+			this.pizza=pizza;
+		}
+
+	public String getPizza() {
+		return pizza.getPizza();
+		
+	}
+
+}
+
+
+
+

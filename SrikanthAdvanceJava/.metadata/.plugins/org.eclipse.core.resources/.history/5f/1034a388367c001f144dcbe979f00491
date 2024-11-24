@@ -1,0 +1,54 @@
+package pack1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+
+
+
+/*here i used this servlet and i used one
+ *  html for login page run as application there you get error add login.html you will
+ *   directed to html page from there servket open by action by condition it evaluates
+*/public class Serv1 extends HttpServlet {
+
+
+    public Serv1() {
+        // TODO Auto-generated constructor stub
+    }
+
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String username1=request.getParameter("use");
+		String password1=request.getParameter("pas");
+		
+		if(username1.equalsIgnoreCase("Admin") & password1.equals("admin123")) {
+			
+			out.println("<hmtl>");
+			out.println("<body>");
+			out.println("<h1>hello maneesh</h1>");
+			out.println("</body>");
+			out.println("</hmtl>");
+		}
+		else {
+			
+			out.println("<hmtl>");
+			out.println("<body>");
+			out.println("<h1>invalid credentials</h1>");
+			out.println("</body>");
+			out.println("</hmtl>");
+		}
+		
+		
+		
+		
+	}
+
+}

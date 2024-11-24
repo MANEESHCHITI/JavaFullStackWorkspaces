@@ -1,0 +1,46 @@
+package PackInherit1;
+
+public class HierachialInheritance {
+
+	public static void main(String[] args) {
+	
+ Parent1 obj=new Parent1();
+ Child1 obj1=new Child1();
+ Child2 obj2=new Child2();
+ Child3 obj3=new Child3();
+ obj.disp();
+ obj1.disp();
+ obj2.disp();
+ obj3.disp();
+	}
+
+}
+class Parent1
+{
+	public void disp()
+	{
+		System.out.println("parent");
+	}
+}
+class Child1 extends Parent1
+{
+	public void disp()
+	{
+		System.out.println("child1");
+	}
+}
+class Child2 extends Parent1
+{
+	public void disp()
+	{
+		System.out.println("child2");
+	}
+}
+class Child3 extends Parent1
+{
+	public void disp()
+	{
+		System.out.println("child3");
+	}
+}
+

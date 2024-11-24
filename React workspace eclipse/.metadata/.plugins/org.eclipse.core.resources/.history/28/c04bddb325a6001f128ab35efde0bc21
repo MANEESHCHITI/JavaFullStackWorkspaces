@@ -1,0 +1,27 @@
+package com.react01.fetch.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ReactController {
+	
+//	@RequestMapping
+//	String helloSpringBoot() {
+//	String str = "Hello Spring Boot Application !!";
+//	return str;
+//	}
+	
+	@GetMapping("getItems")
+	public String getItems() {
+		return "HI Maneesh";
+	}
+	
+	@GetMapping("hihello")
+	public String hello() {
+	return "Hello Spring Boot app or Micro Sercices !!";
+	}
+
+
+}

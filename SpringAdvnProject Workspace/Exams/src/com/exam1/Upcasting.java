@@ -1,0 +1,55 @@
+package com.exam1;
+
+ abstract class Abc {
+
+
+	
+	public abstract void disp1() ;
+
+	
+
+	public void disp2() {
+		System.out.println("2");
+	}
+}
+
+class B extends Abc {
+	
+
+	
+	public void disp1() {
+		System.out.println("3");
+	}
+
+	public void disp3() {
+		System.out.println("4");
+	}
+
+}
+
+public class Upcasting {
+
+	public static void main(String args[]) {
+//	B obj = new B();
+		
+		//upcasting
+//	Abc obj = new B();
+////	obj.disp1();
+////	obj.disp2();
+////	obj.disp3();
+//	
+////	B obj5=new Abc()  //error
+//		
+//	B obj1= (B)obj;
+
+//B obj=new B();
+//obj.disp1();
+	
+	Abc obj2=new B();
+	obj2.disp1();
+	obj2.disp2();
+	
+
+
+	}
+}

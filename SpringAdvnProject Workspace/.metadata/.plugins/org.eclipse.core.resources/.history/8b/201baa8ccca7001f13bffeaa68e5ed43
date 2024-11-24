@@ -1,0 +1,416 @@
+/* here in this by default component annotation has decaptalized first letter
+ *  @Component("pizzaController") in getBean we can call by class without double quotes
+ *  and without typecasting .if we call it by getBean("pizaControler") we give double quotes and typecasted
+ *  if we use other custom mapping @Component("pizza") we take the same in get bean.
+ *  Instead of taking var context we can take ApplicationContext  context .
+ *  
+ *   flow : maven is imported without any dependency, inbuilt is enough like spring-boot-starter(we can check inBUilt in spring Initializer
+ *   As the @Component creates obj like bean  so we can access this method in run)*/
+
+
+
+/*
+ * package com.javaguides.ComponentAnnotaion01.controller;
+ * 
+ * import org.springframework.stereotype.Component;
+ * 
+ * @Component
+ *  public class PizzaController {
+ * 
+ * public String getPizza()
+ *  { 
+ *  return "hot pizza";
+ * 
+ * }
+ * 
+ * }
+ */
+
+//AutowiredAnnotation
+
+
+/*this is for autowired annotation as this annotation
+ *  is used to inject the bean automatically means i created one service package 
+ * under main root package, in this package i created class of VegPizza and returns string and 
+ * used @COmponent for creation of bean.In 
+ * this present class i used @Component 
+ * (to create bean ie old) and created variable of vegpizza of datatype 
+ * class and i injected bean in three ways like constructor,
+ *   setter injection,field injection there we use @autowired to 
+ *   inject the bean(VegPizza) automatically. for the field injection i we use @Autowired before variable.
+*/
+package com.javaguides.ComponentAnnotaion01.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.javaguides.ComponentAnnotaion01.service.VegPizza;
+
+//@Component
+//public class PizzaController {
+//	
+//	private VegPizza vegpizza;
+//	
+	//by comstructor injection
+//		
+		@Autowired
+		public  VegPizza(VegPizza vegpizza) {
+			this.vegpizza=vegpizza;
+		}
+//	
+//	//by setter injection
+//	
+//			//	@Autowired
+//			//	public void setVegPizza(VegPizza vegpizza) {
+//			//		this.vegpizza=vegpizza;
+//			//	}
+//	
+//	//field injection nothing but @Autowired for variable top itself 
+//	
+//	
+//	public String getPizza() {
+//		return vegpizza.getPizza();
+//		
+//	}
+//
+//}
+
+
+////Qualifier Annotation
+//
+///*this is Qualifier annotation in this i created one Pizza interface
+// * and two,NOnVegPizza,VegPizza classes these two classes implements
+// *  interface Pizza. for both classes i used @componnet to create bean and in this
+// *  present page i used interface as variable instead of classes because of
+// *   loosley coupled means dynamically changing classes. as i used autowired annotaion
+// *    with constructor injection to inject bean .at now situation there is two beans to 
+// *    inject here because of @Autowired so here it get ambiquety to overcome
+// *     this we used @Quakifier in constructor with the default id of component for classes
+// *      by this we can get changed the classes*/
+//
+////package com.javaguides.ComponentAnnotaion01.controller;
+////import org.springframework.beans.factory.annotation.Autowired;
+////import org.springframework.beans.factory.annotation.Qualifier;
+////import org.springframework.stereotype.Component;
+////
+////import com.javaguides.ComponentAnnotaion01.service.Pizza;
+////
+////@Component
+////public class PizzaController {
+////	
+////	private Pizza pizza; //( we use interface here to loosely coupled means dynamic changing of implemented classes)
+////	
+////	//by comstructor injection
+////		
+////		@Autowired						//this below nonVegPizza is the component class default id
+////											
+////		public void VegPizza(@Qualifier("nonVegPizza") Pizza pizza) {
+////			this.pizza=pizza;
+////		}
+////
+////	public String getPizza() {
+////		return pizza.getPizza();
+////		
+////	}
+////
+////}
+//
+////Primary Annotation
+//
+///*  this is primary annotation here i used Primary annotaion in the VegPizza
+// *  class and i can aslo use it in the NonVegPizza this annotation is used to give higher preference
+// *   to a bean when there are multiple beans of same type. In the Qualifier above it injects 
+// *    by the id to avoid ambiquety or confusion  here without qualifier it gets an ambiquety in this case
+// *    i can use primary for higher preference bean which we want . as we can solve this by 
+// *    Qualifier or  primary in this ambiquety scearios  */
+////package com.javaguides.ComponentAnnotaion01.controller;
+////import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Qualifier;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.stereotype.Component;
+//
+//import com.javaguides.ComponentAnnotaion01.service.Pizza;
+//
+////@Component
+////public class PizzaController {
+////	
+////	private Pizza pizza; //( we use interface here to loosely coupled means dynamic changing of implemented classes)
+////	
+////	//by comstructor injection
+////		
+////		@Autowired						//this below nonVegPizza is the component class default id
+////											
+////		public void VegPizza(Pizza pizza) {
+////			this.pizza=pizza;
+////		}
+////
+////	public String getPizza() {
+////		return pizza.getPizza();
+////		
+////	}
+////
+////}
+
+
+//for Bean
+
+/*in this bean annotation  i used creation of bean 
+ * using java based , by new keyword for  that the bean annotation be inside 
+ * the @configuration annotation for class as i 
+ * returned of VegPizza orNonvegPizza class
+ * returns to Interface for loosely coupling
+ *  and removing annotations from VegPizza
+ *   and NonVegPizza because it is not annotation based
+ * and without touching PizzaController ,i
+ *  used VegPizza class for getBean and runned and alo i used custom 
+ * bean name of bean and  called by bean name and runned 
+ * also i runned by default bean means method name.
+ * thats like same i createed bean for NonVegPizza and 
+ *  i created method for pizzacontroller and return type 
+ *  is PizzaCOntroller class and sending 
+ * bean method as arugment which is a pareameter for the
+ *  constructor in the PizzaController(PizzaCOntroller  constructor is to create before )
+ * by this we can call the getBean of PizzaControoller
+ *  class or default class name . 
+ * and in the bean i used init,destroy so that i created 
+ * method respectively in the PizzaController Class, the init is invoked before creation of constructor first then after program start and before destroying destroy method invokes*/
+
+
+//public class PizzaController {
+//	
+//	private Pizza pizza; 
+//								
+//		public  PizzaController(Pizza pizza) {
+//			this.pizza=pizza;
+//		}
+//
+//	public String getPizza() {
+//		return pizza.getPizza();
+//		}
+//	
+//		
+//	public void init() {
+//		System.out.println("Initializatioin logic");
+//	}
+//	
+//	public void destroy() {
+//
+//		System.out.println("destroy logic");
+//	}
+//
+//}
+
+// for sterio type (service ,controller,repository)
+
+/*
+ * @service,@Controller and @Repository are the specialized annotations under
+ * the @Component annotation .we should use these individual annotations in the
+ * respective classes these classes also created bean at the respective classes.
+ * In this sterio i had created one packages of controller, service,repository 
+ * in that i created classes with annotation to create bean, created method hello
+ *  with return type string and i have called each individually in the manin with
+ *   class name inside getBean.
+ */
+
+//lazy loader
+
+/*
+ * in this basically the spring creates singleton objects at starting 
+ * of context if we want to load bean on-demand we use @lazy annotation
+ *  and call explicitly in run.In this i created one package with name 
+ *  lazy and in it i created two classes they are EagerLoader and LazyLoader
+ *  in this i created constructors with Component annotation for class,as
+ *   by this it creates bean and prints while we run but among those two in 
+ *   LazyLoader i used lazy annotation so that the bean is created on demand means 
+ *   i called this bean to create from run class by classname of lazyloader.
+ *   lazy annotation can be uses with component,configuration,bean
+ *  
+ *  
+ *  
+ */
+
+// scopes
+
+/*
+ * in this i used singleton and prototype scope with @Scope annotation.
+ * I created package named scope in those i created two classes one is
+ *  SingletonBean and other is ProtoTypeBean innside of those class 
+ *  i created constructors with @Components annoattion for
+ *  bean creation and scope of singleton and protoptype as
+ *   we can directly meantion value=singleton but in ConfigurableBeanFactory
+ *    it has those in built that we use.as singleton class object is created only once 
+ *    acrosss the application so in the run class i created
+ *     3 objects and simultaneously printed hascode 
+ *    there we see the object is created only once
+ *     in singleton and the object is created multiple types
+ *     as request in prototype.
+ */
+
+//Value
+
+/*  value annotation is used to inject values to the varaibles
+ * in this i created value package in that i created one
+ *  variable injected by value annotation directly 
+ *  and i wrote key ,values in the propertiesfile and injected
+ *   in varible  by value annotation by the key .and next i injected
+ *    environmentvariable and home directory. i getterated getters and in the run method i accessed it.
+ *    error with  @Value("${java.home}")
+ * */
+
+
+//PropertySource and PropertySources
+
+/*
+ * The propertysource annotattion is used to provide properties file to spring
+ * environment and propertysources is used to provide multiple properties files
+ * to springEnvironment.(look book notes first in plain page)
+ * In this i accesed custom properties to spring environment.I created file in (/ComponentAnnotaion01/src/main/resources)with
+ *  mail.propertiesthere i wrote some key-value pairs and i created propertysource package and inside i created two classes one is
+ *   SpringConfig and in this i used configuration annotation and propertysource tag with classpath 
+ *  and in the second class i used @component to create bean and created variables three and used value annotation
+ *   for retrieval from file and  getters for variables and in run i runned .in the next created another properties file and
+ *    in the SpringConfig  i used another propertysource tag and done the same variables ,value,getters,run and in the next
+ *     i created propertysources tag with two  propertysource tag inside and run and in the next instead of value annotation 
+ *     i retrieved by environment variable and type Environment ,imported the package and commented the value tags  and addded
+ *      autowired annotation to inject and runnned.
+  
+ *      
+ */
+
+//Controller Annotation
+
+/* In this annotation i controller is a specified of the component annotation and
+ *  this controller annotation created beans and can be used in the controller 
+ *  class.as the controller in  spring mvc handles incomming http requests we use
+ *   typically @requestmapping with controler annotation
+ *   
+ *   In this i added dependency of spring-boot-starter-web means i modified by adding 
+ *   web for present dependency for spring mvc and http requests we need this dependency
+ *   I created BookController class in the controller package there i used @controller for spring mvc controller
+ *   and i created a method which returns a string and i added requestmapping annotaion for
+ *     http request from browser  and the http request converted to response sending it back
+ *      to json format by using @responsebody annotation and run search the rstapi url in browser
+ *      we can change port number in the properties files server.port=8082 adding this 
+ *      and to check the json format means key value pairs i created a package of beans and in that i created Book class
+ *       and in that i created a pojo class type id,title,description,setters and getters,constructor and in the controller
+ *        i created a method return type is Book(pojo) and created a object and returned the obj
+ *         requestmapping and requestbody and run , go to browsera nd serach rest api url
+ *         
+ *         responsebody annotation converts the java code in to json format and gives it to client
+ *         */
+
+//RestController annotation
+
+/*
+ * Read the book first
+ * in order to use restful webservices using spring mvc we need to use controller and reesponse body.
+ * instead of using both controller and request body we use restcontroller. this way is used in httrequest
+ *  mapping of spring mvc if we use spring mvc we use controller only 
+ *  In this from above i  used requestbody instead of method to class as common with controller it works and
+ *   instead of two annotations i used only restCoontroller.
+ */
+
+// RequestMapping annotation
+
+/* this annotation is used to map web request to spring controller methods
+ * i used the requestannotation for class for the endpoints it include this
+ *  and adding the method mapping 
+ *  I used this annotation with multiple url of method inside curly braces
+ *  by default the method takes get method but we explicitly
+ *   mentioned and also I used
+ *  the produces and consumes(produces means the server generates the format to client and 
+ *  consumes means the server takes it in the format.(should see in depth later)) */
+
+
+
+//getMApping 
+
+/*
+ * getmapping is the shortcut of requestmapping with method get ie(@RequestMApping(method=RequestMethod.GET))
+ * it is used to map the http request to the method having getmapping annotation
+ * it is used to acces single,multiple urls( may be resources)
+ * In this i removed reqestmapping and kept getmapping and i used single url and multiple url and also i used produces and consumes
+ */
+
+
+//PostMapping
+
+/*
+ * mapping http post requests onto the specific methods 
+ * as i have created one create method and used requestmapping
+ *  inside Requestmethod type post and in method i  used return type as book as parameter of Book with annotation of requestbody(may or maynot)which
+ *   return  and also i printed the values 
+ * and and run and in the postman i kept post as method and send values of book in json format
+ * 
+ * in the second process instead of requestmapping and requestmethod the two were present
+ *  in post mapping so i used as shortcut  and i used consumer as taking body as json and i used requestBody to convert json format to java .
+ *  in next i runned and done through postman
+ *  
+ *  in next as i wanted to create the status as 201 means created so i used annotation of ResponseSatus as   created adn run 
+ *  the code.In before i got overal of 200 series meaens 200 only by using this i create specifically
+ *  and next instead of responsestsus  i used ResponseEntity of return type and genric as book and returned the the new resposneentity with booka and status created
+ */
+
+//put mapping 
+
+//i cresated method in the same one of postmapping as i kept the url of  with id in curly. i took the 
+//method as pareamters id,book object ref as i used @pathVaraiable to
+//bind the id means to reflect the id of url to paremeter
+//and i set the value and reurn and run .in the post man give
+//thte value of id with method put with body 
+//as we can do this with requestmapping annotation or else
+//shortcut of @PutMapping as like old postmapping.
+
+//delete mapping 
+//
+//in this i can do by requestmapping as like requestmapping inside method and shortcut is deltemapping annotation 
+//we should perfectly check the url like initila it has v1(version 1 for class)as i returned string through responseentity 
+//string of return type string
+
+
+//pathvariable annotation
+
+/*this annotation is used to bind the url template varible with the method parameter.
+ * in this i used more than one url template
+ *  variables and i used the same in the path 
+ *  variable and we can take other variables in
+ *   method but in this situation the template variable 
+ *   cannot find the variable of method so in this situation 
+ *   the pathvariable is added with url template variable and
+ *    comming with datata type and other variable name.
+ *    we uses responseentity because it has multiple fesatures than using only object to return
+ *    in this responseentity we can add status code.
+ * 
+ */
+//ConfigurationProperties
+
+/*
+ * it is used to access the data from the properties file by this annotation in
+ * this i created one configurationproperties package in these i created two classes
+ *  in the properties i took some fieilds and i mapped with this annotation by prefix
+ *   in one class i created same varables and created getters and setters and i generated
+ *    bean by component annotation and in the other class i created that class obj ref 
+ *    with auto wired annotation  and creatd deisplay  method and called those fields 
+ *    with the obj ref  and in the properties i created more nested fields and in the class i
+ *     created nested class with fieds as variables and in the above class i created obj
+ *      for inner classs to access the fields in the display of other class i called it.
+ *      In the run i created bean with that display present class because it is also has the bean
+ *        and from this displat method i was calling those fields
+ */
+
+//SpringBootApplication
+/* This annotation consits of three sub anntations instead
+ *  of those we use this anntaion and they are Enable
+ *   autoconfiguration,SpringBootConfiguration,ComponetScan
+ *   
+ *   SpringBootConfiguration  has configurationa annotaion which
+ *    is give for java based classs and inside we use bean annotation
+ *    
+ *    autoconfiguration is used to configure the dipathcer servlet to redirect(will see)
+ *    
+ *    Component scan is used to scan sub packages components in this i createdone package
+ *     named sub and created class that class is java
+ *      based bean with coomponent annotation  that is 
+ *      accesed in the run and the run has the @SpringBootConfiguration annotation
+ * */
+

@@ -1,0 +1,47 @@
+package caseStudys;
+
+class A5
+{
+	public void disp()
+	{
+	int sum=0;
+		for(int i=5;i>=1;i=i-2)
+		{
+			
+			
+		}
+		
+			
+	}
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

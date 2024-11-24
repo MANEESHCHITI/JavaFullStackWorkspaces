@@ -1,0 +1,37 @@
+package Demo1;
+
+public class ReturnNoError
+{
+	public static void main(String args[])
+	{
+		public void show()
+		{
+			System.out.println("hi");
+			
+		
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public class ReturnNoError {
+	//public static void main(String args[])
+	//{
+//class1 obj=new class1();
+//obj.show();
+
+	
+}
+}

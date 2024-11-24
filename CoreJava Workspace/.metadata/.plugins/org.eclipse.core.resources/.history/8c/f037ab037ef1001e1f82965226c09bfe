@@ -1,0 +1,34 @@
+package Demo1;
+
+class class1
+{
+	public void show()
+	{
+		System.out.println("hi");
+		return;
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class ReturnNoError {
+	public static void main(String args[])
+	{
+class1 obj=new class1();
+obj.show();
+
+	
+}
+}

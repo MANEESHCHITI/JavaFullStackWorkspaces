@@ -1,0 +1,50 @@
+package RoomExp;
+
+public class Rough {
+
+	public static void main(String[] args) {
+Ab obj=new Ab(10);
+
+
+
+
+
+	}
+
+
+class Ab
+{
+	public Ab(int a)
+	{disp(5);
+		System.out.println("constructor");
+		
+	}
+	public void disp(int  a)
+	{
+		System.out.println("disp");
+	}
+ 
+ /*public void disp(int a)
+ {
+System.out.println("int"+a);
+
+ }
+ public void disp(float b)
+ {
+	 System.out.println("flaot"+b);
+	 
+ }
+ public void disp(long c)
+ {
+	 System.out.println("long"+c);
+	 
+ }*/
+ 
+	
+
+
+
+
+
+
+}

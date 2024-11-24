@@ -1,0 +1,8 @@
+package com.javaguides.ComponentAnnotaion01.lazy;
+
+public class Abc {
+
+	public Abc() {
+		System.out.println("hi");
+		}
+}

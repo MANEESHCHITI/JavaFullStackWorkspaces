@@ -1,0 +1,12 @@
+package BeanLIfe.CycleBean;
+
+public class UserService {
+
+	private UserRepository userRepository;
+	
+	public UserService() {
+		System.out.println("instance created");
+	}
+	
+	
+}

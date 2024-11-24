@@ -1,0 +1,29 @@
+package array;
+
+public class Rough {
+
+	public static void main(String[] args) {
+	Roughworks obj=new Roughworks();
+		obj.disp();
+
+	}
+
+}
+class Roughworks
+{
+	//int a=5;
+	//int a=6;
+	public void disp()
+	{
+		//int a;
+	//	System.out.println(this.a);
+		for(int a=9;a<11;a++)
+		{
+			System.out.println("hi");
+			System.out.println(a);
+		}
+		
+		//System.out.println(a);
+	}
+	}
+

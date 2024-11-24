@@ -1,0 +1,52 @@
+package array;
+
+import java.util.Scanner;
+
+public class Array16 {
+
+	public static void main(String[] args) {
+		Case3 obj=new Case3();
+		obj.disp();
+		
+
+	}
+
+}
+class Case3
+{	
+	//int count;
+Scanner s=new Scanner(System.in);                            //case6  3Q write a program to store first five odd numbers in an array and print it by for loop
+	public void disp()
+	
+	{	
+		int i=1;
+		int j=0;
+		System.out.print("enter array length:-");
+		int limit=s.nextInt();
+		int a[]=new int[limit];
+		while(true)
+		{
+			if((i%2)!=0)
+			{
+				a[j]=i;
+				j++;
+			//	count++;
+				if(j==a.length)
+					break;
+			}
+			i++;
+		}
+			for(limit=0;limit<a.length;limit++)
+			{
+				System.out.println(a[limit]);
+			}
+			System.out.println(a.length);
+			System.out.println(i);
+			System.out.println(j);
+				
+				
+				
+			}
+		}
+
+

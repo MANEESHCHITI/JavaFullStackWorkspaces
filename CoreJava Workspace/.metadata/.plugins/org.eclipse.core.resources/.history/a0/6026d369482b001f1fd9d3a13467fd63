@@ -1,0 +1,32 @@
+package Collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Pr5 {
+
+	public static void main(String[] args) {
+		
+		ArrayList al=new ArrayList();
+		al.add("maneesh");
+		al.add("amar");
+		al.add("vara");
+		
+		Iterator itr=al.iterator();
+		
+		
+		while(itr.hasNext())
+		{
+			
+			String  v=(String) itr.next();
+			System.out.println(v);
+			
+			{
+				itr.remove();
+				System.out.println("removed maneesh");
+			}
+		}
+
+	}
+
+}

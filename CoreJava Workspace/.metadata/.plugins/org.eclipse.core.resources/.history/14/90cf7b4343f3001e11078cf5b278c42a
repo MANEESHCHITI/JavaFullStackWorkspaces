@@ -1,0 +1,28 @@
+package Demo1;
+
+import java.util.Scanner;
+
+public class ScannerInputTypes {
+
+	public static void main(String[] args) {
+		
+Scanner s=new Scanner(System.in);
+int intt=s.nextInt();
+float flaott=s.nextFloat();
+try {
+String stringg=s.nextLine();
+String stringg1=s.nextLine();
+double doublee=s.nextDouble();
+//char charr=s.next();
+System.out.println(intt);
+System.out.println(flaott);	
+System.out.println(stringg);
+System.out.println("s"+stringg1);
+System.out.println("d"+doublee);
+
+}
+catch(Exception e) {
+	System.out.println(e);
+	}
+
+}

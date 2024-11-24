@@ -1,0 +1,129 @@
+package com.javaguides.ComponentAnnotaion01;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.javaguides.ComponentAnnotaion01.configurartionproperties.AppPropertiesDemo;
+import com.javaguides.ComponentAnnotaion01.controller.MyController;
+import com.javaguides.ComponentAnnotaion01.lazy.LazyLoader;
+import com.javaguides.ComponentAnnotaion01.propertysource.PropertySourceDemo;
+import com.javaguides.ComponentAnnotaion01.repository.MyRepository;
+import com.javaguides.ComponentAnnotaion01.scope.ProtoTypeBean;
+import com.javaguides.ComponentAnnotaion01.scope.SingletonBean;
+import com.javaguides.ComponentAnnotaion01.sub01.ComponentScanning;
+import com.javaguides.ComponentAnnotaion01.value.ValueAnnotationDemo;
+
+@SpringBootApplication
+public class ComponentAnnotaion01Application {
+
+	public static void main(String[] args) {
+		
+		//For component anotaion
+//		ApplicationContext context in the place of var context.
+		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		PizzaController pizzacontroller=context.getBean(PizzaController.class);
+//														//"pizzaController"(default Id(it is same as bean id))
+//														//"pizaa"(custom Id)
+//		System.out.println(pizzacontroller.getPizza());
+//	
+		
+		//for autowired not changed anything in this.
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		PizzaController pizzacontroller=context.getBean(PizzaController.class);
+//														//"pizzaController"(default Id(it is same as bean id))
+//														//"pizaa"(custom Id)
+//		System.out.println(pizzacontroller.getPizza());
+		
+		// for configuration
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		PizzaController pizzacontroller=context.getBean(PizzaController.class);
+//														
+//		System.out.println(pizzacontroller.getPizza());
+		
+		//for bean
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		VegPizza vegpizza=context.getBean(VegPizza.class);
+//														
+//		System.out.println(vegpizza.getPizza());
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		VegPizza vegpizza=(VegPizza) context.getBean("vegpizzabean");
+//														
+//		System.out.println(vegpizza.getPizza());
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		VegPizza vegpizza=(VegPizza) context.getBean("vegPizza");//here it is dfault bean of method name decaptiliaze first word
+//														
+//		System.out.println(vegpizza.getPizza());
+	
+		
+//		var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		PizzaController pizzacontroller=(PizzaController) context.getBean("pizzaController");
+//		System.out.println(pizzacontroller.getPizza());
+		
+		
+		//for stereotype annotations
+		
+//	var context=SpringApplication.run(ComponentAnnotaion01Application.class, args);
+//		MyService myService=context.getBean(MyService.class);
+//		System.out.println(myService.hello());
+		
+//		MyController myController=context.getBean(MyController.class);
+//		System.out.println(myController.hello());
+		
+//		MyRepository myRepository=context.getBean(MyRepository.class);
+//		System.out.println(myRepository.hello());
+		
+		// for lazy loader
+		LazyLoader lazyloader=context.getBean(LazyLoader.class);
+		
+		//for scopes
+//		
+//		SingletonBean singletonbean1=context.getBean(SingletonBean.class);
+//		System.out.println(singletonbean1.hashCode());
+//		SingletonBean singletonbean2=context.getBean(SingletonBean.class);
+//		System.out.println(singletonbean2.hashCode());
+//		SingletonBean singletonbean3=context.getBean(SingletonBean.class);
+//		System.out.println(singletonbean3.hashCode());
+//
+//		
+//		ProtoTypeBean prototypebean1=context.getBean(ProtoTypeBean.class);
+//		System.out.println(prototypebean1.hashCode());
+//		ProtoTypeBean prototypebean2=context.getBean(ProtoTypeBean.class);
+//		System.out.println(prototypebean2.hashCode());
+//		ProtoTypeBean prototypebean3=context.getBean(ProtoTypeBean.class);
+//		System.out.println(prototypebean3.hashCode());
+	
+//	ValueAnnotationDemo valueannotationdemo=context.getBean(ValueAnnotationDemo.class);
+//	System.out.println(valueannotationdemo.getDefaultName());
+//	System.out.println(valueannotationdemo.getHost());
+//	System.out.println(valueannotationdemo.getGmail());
+//	System.out.println(valueannotationdemo.getPassword());
+//	System.out.println(valueannotationdemo.getJavaHome());
+////	System.out.println(valueannotationdemo.getHomeDir());
+	
+	//@PropertySource and @PropertySources annotations
+	
+//	PropertySourceDemo propertysourcedemo=context.getBean(PropertySourceDemo.class);
+//	System.out.println(propertysourcedemo.getHost());
+//	System.out.println(propertysourcedemo.getEmail());
+//	System.out.println(propertysourcedemo.getPassword());
+//	System.out.println(propertysourcedemo.getAppName());
+//	System.out.println(propertysourcedemo.getAppDescription());
+
+	//@ConfigurationProperties
+	
+//	AppPropertiesDemo apppropertiesdemo=context.getBean(AppPropertiesDemo.class);
+//	apppropertiesdemo.display();
+	
+	//component scan in the spring boot configuration annotation and it is mmust use in this run class
+//	ComponentScanning componentscanning=context.getBean(ComponentScanning.class);
+//	System.out.println(componentscanning.disp());
+	
+
+	}
+
+}

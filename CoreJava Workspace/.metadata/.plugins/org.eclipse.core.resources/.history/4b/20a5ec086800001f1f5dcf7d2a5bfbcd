@@ -1,0 +1,6 @@
+package array;
+
+>>dont take many variables utilize the used variables
+for loop initailization within loop but reference would be different
+we can take same initialization of variable again by loops which ends within loop
+

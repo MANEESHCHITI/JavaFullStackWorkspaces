@@ -1,0 +1,8 @@
+127.0.0.1 - - [26/Sep/2024:13:26:28 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:30 +0530] "GET /SerApp2/ HTTP/1.1" 404 764
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:30 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:39 +0530] "GET /SerApp2/login.html HTTP/1.1" 200 315
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:46 +0530] "GET /SerApp2/hi?use=maneesh&pas=rao HTTP/1.1" 200 64
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:48 +0530] "GET /SerApp2/hi?use=maneesh&pas=rao HTTP/1.1" 200 64
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:26:52 +0530] "GET /SerApp2/hi?use=maneesh&pas=rao HTTP/1.1" 200 64
+0:0:0:0:0:0:0:1 - - [26/Sep/2024:13:27:03 +0530] "GET /SerApp2/hi?use=admin&pas=admin123 HTTP/1.1" 200 58

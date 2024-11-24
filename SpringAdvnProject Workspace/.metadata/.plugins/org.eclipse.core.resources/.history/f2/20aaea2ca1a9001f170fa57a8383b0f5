@@ -1,0 +1,38 @@
+package com.exam1;
+
+class Abc {
+
+	public Abc() {
+		System.out.println("parent constructor");
+	}
+	public void disp1() {
+
+		System.out.println("1");
+	}
+
+	public void disp2() {
+		System.out.println("2");
+	}
+}
+
+class B extends A {
+	public B() {
+		System.out.println("child constructor");
+	}
+	public void disp1() {
+		System.out.println("3");
+	}
+
+	public void disp3() {
+		System.out.println("4");
+	}
+
+}
+
+public class Upcasting {
+
+	public static void main(String args[]) {
+		A obj = new B();
+
+	}
+}

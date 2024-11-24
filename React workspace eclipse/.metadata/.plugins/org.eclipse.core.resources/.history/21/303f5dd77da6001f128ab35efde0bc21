@@ -1,0 +1,55 @@
+package com.react01.fetch.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ReactController {
+	
+//	@RequestMapping
+//	String helloSpringBoot() {
+//	String str = "Hello Spring Boot Application !!";
+//	return str;
+//	}
+	
+	@GetMapping("getSring")
+	public String getString() {
+		return "HI Maneesh";
+	}
+	
+	@GetMapping("hihello")
+	public String hello() {
+	return "Hello Spring Boot app or Micro Sercices !!";
+	}
+
+	@GetMapping("getItems")
+	public String getItems() {
+		return "{\r\n"
+				+ "            \"id\": \"1\",\r\n"
+				+ "            \"firstname\": \"Srikanth\",\r\n"
+				+ "            \"lastname\": \"C\",\r\n"
+				+ "            \"email\": \"srkntjva@gmail.com\"\r\n"
+				+ "        },\r\n"
+				+ "        {\r\n"
+				+ "            \"id\": \"2\",\r\n"
+				+ "            \"firstname\": \"Venkat\",\r\n"
+				+ "            \"lastname\": \"C\",\r\n"
+				+ "            \"email\": \"Venkat@gmail.com\"\r\n"
+				+ "        },\r\n"
+				+ "        {\r\n"
+				+ "            \"id\": \"3\",\r\n"
+				+ "            \"firstname\": \"Nag\",\r\n"
+				+ "            \"lastname\": \"C\",\r\n"
+				+ "            \"email\": \"Nag@gmail.com\"\r\n"
+				+ "        } ";
+		
+	}
+	
+	 @GetMapping("employee")
+	 Employee getEmployee() {
+	 return new Employee("Rahul", "Reddy ");
+	 }
+
+
+}

@@ -1,0 +1,27 @@
+package Demo1;
+
+public class Bin {
+
+	public static void main(String[] args) {
+		int s=6;
+		int count=0;
+		for(int i=1;i<=s;i++)
+		{
+			if(s%i==0)
+			{
+				count=count+1;
+			}
+		}
+		if(count>2)
+		{
+			System.out.println("not prime");
+		}
+		else
+		{
+			System.out.println("prime");
+		}
+		
+		
+	}
+
+}

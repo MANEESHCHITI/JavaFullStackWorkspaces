@@ -1,0 +1,51 @@
+package PackInherit1;
+
+public class multiLevel {
+                                              //           multilevel inheritance
+	public static void main(String[] args) {
+		
+D obj=new D();
+obj.disp2();
+obj.disp1();
+obj.disp3();
+	}                                          
+
+}
+
+
+
+abstract class A
+{
+
+	 public abstract void disp1();
+}
+ abstract class B extends A
+ {
+	 public void disp2()
+	 {
+		 System.out.println("1");
+	 }
+ }
+ class C extends B
+ {
+	 public void disp2()
+	 {
+		 System.out.println("1");
+	 }
+	 public void disp1()
+	   {                                                           // concrete method  means declaring abstract method
+		   System.out.println("declartion for grandparent");
+	   }
+	 
+	 public void disp3()
+	 {
+		 System.out.println("2");
+	 }
+ }
+class D extends C
+{
+	 public void disp1()
+	   {
+		   System.out.println("declartion for grandparent");           //overiding method which is abstract declaration
+	   }
+	}

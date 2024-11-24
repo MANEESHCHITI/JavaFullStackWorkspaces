@@ -1,0 +1,65 @@
+package pack1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+public class Serv1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public Serv1() {
+    }
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		   // it was not working with doPost here sir added odbc but i added mysql-connector jar in reference library and aso i got error so i added the the same jar in lib also
+		
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		
+		System.out.println("hlooooo");
+		String username1=request.getParameter("use");
+		String password1=request.getParameter("pas");
+		
+                 DbConnection obj=new DbConnection( );
+                 try {
+					boolean status=obj.getDbConnection(username1,password1);
+					System.out.println("serv status down");
+					
+					if(status) {
+						
+						out.println("<hmtl>");
+						out.println("<body>");
+						out.println("<h1>success</h1>");
+						out.println("</body>");
+						out.println("</hmtl>");
+					}
+					else {
+						
+						out.println("<hmtl>");
+						out.println("<body>");
+						out.println("<h1>invalid credentials</h1>");
+						out.println("</body>");
+						out.println("</hmtl>");
+					}
+                 }	
+					
+                 catch (ClassNotFoundException | SQLException e) {
+ 					// TODO Auto-generated catch block
+ 					e.printStackTrace();
+ 				}
+			}
+}
+                 
+            
+                 
+
+		
+

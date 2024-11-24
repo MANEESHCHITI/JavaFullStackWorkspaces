@@ -1,0 +1,25 @@
+package collectionsallmethods;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddAll {
+
+	public static void main(String[] args) {
+
+		List<String> ll=new ArrayList<>();
+		ll.add("a");
+		ll.add("b");
+		ll.add("c");
+		ll.add("d");
+		ll.add("e");
+		System.out.println(ll);
+		ll.add(1, "f"); 
+		System.out.println(ll);
+		ll.addAll(ll);
+		System.out.println(ll);
+		
+		
+	}
+
+}

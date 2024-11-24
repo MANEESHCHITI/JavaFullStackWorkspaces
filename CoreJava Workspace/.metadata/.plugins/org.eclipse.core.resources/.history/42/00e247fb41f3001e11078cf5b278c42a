@@ -1,0 +1,23 @@
+package Demo1;
+
+import java.util.Scanner;
+
+public class ScannerInputTypes {
+
+	public static void main(String[] args) {
+		
+Scanner s=new Scanner(System.in);
+int intt=s.nextInt();
+float flaott=s.nextFloat();
+String stringg=s.nextLine();
+double doublee=s.nextDouble();
+//char charr=s.next();
+System.out.println(intt);
+System.out.println(flaott);	
+System.out.println(stringg);
+System.out.println(doublee);
+
+
+	}
+
+}

@@ -1,0 +1,37 @@
+package pack1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+
+@WebServlet("/hi")
+public class Serv1 extends HttpServlet {
+
+
+    public Serv1() {
+        // TODO Auto-generated constructor stub
+    }
+
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String username1=request.getParameter("use");
+		String password1=request.getParameter("pas");
+		out.println("<hmtl>");
+		out.println("<body>");
+		out.println("<h1>hello maneesh</h1>");
+		out.println("</body>");
+		out.println("</hmtl>");
+		
+		
+		
+	}
+
+}

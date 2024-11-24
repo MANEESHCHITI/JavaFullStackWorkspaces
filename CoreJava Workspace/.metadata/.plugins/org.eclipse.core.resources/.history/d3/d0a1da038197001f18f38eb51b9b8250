@@ -1,0 +1,41 @@
+package Demo1;
+
+
+
+
+
+class SbiBank{
+	public void roi() {
+		System.out.println("5%");
+	}
+	public void challan() {
+		
+		System.out.println("0.5%");
+	}
+	public void SbiDebt() {
+		System.out.println("5croes");
+	}
+}
+class Hdfc extends SbiBank{
+	public void roi() {
+		System.out.println("10%");
+	}
+	public void challan() {
+		System.out.println("1%");
+	}
+	public void HdfcDebt() {
+		System.out.println("15croes");
+	}
+	
+}
+public class Sbi {
+
+	public static void main(String[] args) {
+
+Hdfc hdfc=new Hdfc();    //(down casting .we can access parent class own methods child class own  methods and child class overriden methods)
+hdfc.roi();
+hdfc.challan();
+hdfc.HdfcDebt();
+	}
+
+}

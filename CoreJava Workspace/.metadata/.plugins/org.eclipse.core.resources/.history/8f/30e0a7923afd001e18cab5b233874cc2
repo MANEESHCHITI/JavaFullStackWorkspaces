@@ -1,0 +1,33 @@
+package array;
+
+public class Array4 {
+
+	public static void main(String[] args) {
+		A2 obj=new A2();
+		obj.disp();
+
+	}
+
+}
+class A2
+{	
+	int a[]=new int[] {3,2,1,9,6,12,7};
+	int count;
+
+	public void disp()
+	{
+		for(int i=0;i<a.length;i++)
+		{int b=a[i];
+			if(b>=a[i])
+			{
+				count++;
+				if(count==7)
+				{
+					System.out.println("max"+a[i]);
+				}
+			}
+			
+		}
+	
+	}
+}

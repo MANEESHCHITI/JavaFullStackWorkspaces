@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- <bean id="id01" class="com.maneesh01.Car">
+     </bean> -->            <!-- by dynamic changing of class name above like Car,Bike -->
+     
+     
+    
+   <!-- <context:component-scan base-package="com.maneesh01"></context:component-scan> -->
+   <!--  it is by annotation -->
+   
+ <!--   <bean id="id01" class="com.maneesh01.SpringDov">
+   <property name="brand" value="rangerover"/>  //setter injection by property tag as it set by setBrand() method
+   </bean>
+     -->
+   
+ <!--    <bean id="id01" class="com.maneesh01.SpringDov">
+    <constructor-arg value="kia"/>
+    
+    </bean> -->   <!-- / constructor injection -->
+    
+    
+    <context:component-scan base-package="com.maneesh01"></context:component-scan> 
+	 <!-- <bean id="tyre" class="com.maneesh01.Tyre">
+		 </bean> -->  <!--  this is mix annotation and xml  --> <!-- alone component scan is by annotation it works --> 
+    
+    
+
+</beans>

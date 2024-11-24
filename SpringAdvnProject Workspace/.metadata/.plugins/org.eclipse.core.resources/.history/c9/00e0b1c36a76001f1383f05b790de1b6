@@ -1,0 +1,68 @@
+package com.sb.sb003.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sb.sb003.dto.Student;
+
+@RestController
+public class HelloWorld1 {
+
+	@RequestMapping("/")
+	//localhost:1011/(by default)
+	
+	//Hi Spring Boot
+	
+	public String hello() {
+		return "Hi Spring Boot";
+	}
+	
+	@GetMapping("/student")      //  (but using student it inserts valuse in constrctor arg injection and take key value and set to model )
+												//localhost:1011/student
+												
+												//{"firstName":"Maneesh","lastName":"chiti"}(json format)
+	public Student getstudent() {
+		
+		Student s=new Student(1,"Maneesh","chiti");
+		return s;
+		
+	}
+	
+	@GetMapping("/students")
+	
+	//localhost:1011/students
+
+	//[{"firstName":"varshith","lastName":"c"},{"firstName":"chintu","lastName":"b"},{"firstName":"rahul","lastName":"d"}]
+	
+	public List<Student> getStudents(){
+		List<Student> studentList=new ArrayList<>();
+		Student s=new Student(2,"varshith","c");
+		Student s1=new Student(3,"chintu","b");
+		Student s2=new Student(4,"rahul","d");
+		
+		studentList.add(s);
+		studentList.add(s1);
+		studentList.add(s2);
+		return studentList;
+		
+		
+	}
+	
+	//http://localhost:1011/student/create(it is totally depend on the mapping we took)
+	//	http://localhost:1011/create
+	
+	@PostMapping("create")
+	@ResponseStatus(HttpStatus.CREATED)
+	public Student createStudent(@RequestBody Student student) {
+		return student;
+		
+	};
+}

@@ -1,0 +1,44 @@
+package PackInherit1;
+
+public class In3 {
+
+	public static void main(String[] args) {
+	/*Sbi obj=new Sbi();
+	obj.sbi();*/
+		Bank obj1=new Sbi();
+		obj1.sbi();
+	//	Bank obj3=new Bank();           // error we cant create obj for abstract class directly
+		
+		
+	                                           // abstract class and abstract method.
+	}
+
+}
+
+abstract class Bank
+{
+int a=5;
+	public void icici()
+	{
+		System.out.println("parent own");
+	}
+	//public  void sbi();               This method requires a body instead of a semicolon
+	public abstract void sbi();
+                                                                    
+}class Sbi extends Bank
+{
+	static int a=7;
+	
+	public void disp()
+	{
+		
+	System.out.println("child own");
+	}
+	public void sbi()
+	{
+		System.out.println("parent abstract child definining");
+	}
+	
+
+}
+

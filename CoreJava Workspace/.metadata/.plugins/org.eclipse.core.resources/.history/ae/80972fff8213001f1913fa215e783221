@@ -1,0 +1,28 @@
+package PackInherit1;
+
+public class In5 {
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}
+class Parent13
+{
+	
+public void disp()
+{
+	System.out.println();
+	}
+}
+class Child133
+{
+	
+public
+}
+class 
+{
+	
+
+}

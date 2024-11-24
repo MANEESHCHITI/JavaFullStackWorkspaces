@@ -1,0 +1,20 @@
+package PackInherit1;
+
+public class Child extends Parent {
+
+	
+	int a=10;
+	public void   disp()
+	{
+		super.disp();
+	System.out.println("iam a child of same pack");
+	System.out.println(this.a);
+	System.out.println(super.a);
+	
+	//System.out.println(b);
+	System.out.println(super.c);
+	System.out.println(super.d);
+	}
+	
+	
+}

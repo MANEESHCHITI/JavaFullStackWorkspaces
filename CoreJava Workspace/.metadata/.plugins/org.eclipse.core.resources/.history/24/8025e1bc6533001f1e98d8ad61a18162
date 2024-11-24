@@ -1,0 +1,36 @@
+package Workouts;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+
+
+public class BIn {
+
+	public static void main(String[] args) {
+
+		ArrayList s=new ArrayList();
+		
+			s.add(1);
+			s.add(0);
+			System.out.println(s);
+			System.out.println(s.toArray());
+			System.out.println(s);
+		//		LinkedList s=new LinkedList();
+//		HashSet s=new HashSet();
+//		LinkedHashSet s=new LinkedHashSet();
+//		PriorityQueue s=new PriorityQueue();
+//		HashMap s=new HashMap();
+		
+		
+	
+		
+
+	}
+}
+

@@ -1,0 +1,30 @@
+package Demo1;
+
+import java.util.Scanner;
+
+class Fun
+{
+	public void show(int a)
+	{
+		for(int i=1;i<=a/2;i++)
+		{
+			if(a%i==0)
+			{
+				System.out.println(i);
+				
+			}
+			
+		}
+	}
+	}
+
+
+
+public class PrimeByHalf {
+Scanner s=new Scanner(System.in);
+Fun obj=new Fun();
+int value=s.nextInt();
+obj.show(23)
+
+}
+

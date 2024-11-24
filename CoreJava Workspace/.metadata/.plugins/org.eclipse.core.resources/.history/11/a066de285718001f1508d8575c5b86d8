@@ -1,0 +1,41 @@
+package PackInherit1;
+
+
+
+
+interface C1
+{
+	public void disp();
+	public default void disp1()
+	{
+		
+	}
+}
+interface C2
+{
+	
+}
+class C3
+{
+	C1 obj1=()->
+	{
+		System.out.println("hi");
+	};
+	//C1.super.disp();
+	obj1.disp();
+	public void disp3()
+	{
+		
+	}
+	
+	
+
+}
+public class In10 {
+public static void main(String args[])
+{
+	C3 obj2=new C3();
+	obj2.disp3();
+	
+}
+}

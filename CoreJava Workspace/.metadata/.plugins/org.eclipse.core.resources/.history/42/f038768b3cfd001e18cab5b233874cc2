@@ -1,0 +1,54 @@
+package array;
+
+public class Array5 {
+
+	public static void main(String[] args) {
+	A3 obj=new A3();
+	obj.disp();
+
+	}
+
+}
+class A3
+{                                                             //count the 3 value but only once in digit same like sir said.
+	int a[]=new int[] {313,213,456,233,535,155,312};
+	int count;
+	int s;
+	int f;
+
+	public void disp()
+	{
+		for(int i=0;i<a.length;i++)
+		{
+			s=a[i]%10;
+			f=a[i]/10;
+			if(s==3)
+			{
+				count++;
+				break;
+			}
+			else
+			{
+				if(f%10==5)
+				{
+					count++;
+					break;
+				//	continue;
+				}
+				if(f/10==3)
+				count++;
+				
+					
+			
+			}
+		}
+		System.out.println(count);
+			
+					
+			
+	}
+		
+	
+			
+}
+	

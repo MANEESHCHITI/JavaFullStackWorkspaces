@@ -1,0 +1,8 @@
+package com.javaguides.ComponentAnnotaion01.controller;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Bc {
+System.out.println("hello");
+}

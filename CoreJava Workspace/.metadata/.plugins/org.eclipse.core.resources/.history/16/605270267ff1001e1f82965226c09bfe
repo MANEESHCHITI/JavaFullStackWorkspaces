@@ -1,0 +1,24 @@
+package Demo1;
+
+public class Bin {
+
+	public static void main(String[] args) {
+		int s=11;
+		for(int i=2;i<s;i++)
+		{
+			if(s%i==0)
+			{
+				System.out.println("not prime");
+				break;
+			}
+			else if(s-1==i)
+			{
+				System.out.println("prime");
+			}
+			
+		}
+		
+		
+	}
+
+}

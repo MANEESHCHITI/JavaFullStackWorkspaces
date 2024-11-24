@@ -1,0 +1,17 @@
+package pack1;
+
+public class DbConnection {
+
+	
+	
+	public   boolean getDbConnection(String usernmae1,String password1) {
+		
+		
+		
+		
+		return false;
+		
+		
+	}
+
+}

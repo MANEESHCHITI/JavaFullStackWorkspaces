@@ -1,0 +1,21 @@
+package PackInherit1;
+
+import PackInherit2.Child1;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+	Child t=new Child();
+	
+		t.disp();
+		Child1 t1=new Child1();
+		//t1.child1();
+		
+	
+		
+	}
+
+}
+
+

@@ -1,0 +1,26 @@
+package com.java1;
+
+public class P1 {
+
+	public static void main(String[] args) {
+A1 obj=new A1();
+obj.disp(1000000000);
+	
+	}
+
+}
+
+class A1{
+	public void disp(int a) {
+		System.out.println("int value");            //just integer
+	}
+	public void disp(double b) {
+		System.out.println("double value");           //.deciaml values
+	}
+	public void disp(float c) {
+		System.out.println("float value");      //f   or F
+	}
+	public void disp(long d) {
+		System.out.println("long value");      //L or l
+	}
+}

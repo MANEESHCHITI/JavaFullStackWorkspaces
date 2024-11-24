@@ -1,0 +1,23 @@
+package collectionsallmethods;
+
+
+class A{
+	public void add(int a,int b) {
+	System.out.println(a+b);
+	}
+	public void add(int a,int b, int c) {
+		System.out.println(a+b+c);
+	}
+	
+}
+public class Road {
+
+	public static void  add(int a,int b) {
+		
+		System.out.println(a+b+"child ");
+	}
+	public static void main(String args[]) {
+		
+		Road.add(1, 2);
+	}
+}

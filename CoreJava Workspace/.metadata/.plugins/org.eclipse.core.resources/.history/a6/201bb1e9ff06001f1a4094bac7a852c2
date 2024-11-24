@@ -1,0 +1,14 @@
+package PackInherit1;
+
+public class Parent {
+
+	
+	public int a=5;
+	private int b=6;
+	protected int c=7;
+	int d=8;
+	public void child1()
+	{
+		System.out.println("iam from parent class");
+	}
+}

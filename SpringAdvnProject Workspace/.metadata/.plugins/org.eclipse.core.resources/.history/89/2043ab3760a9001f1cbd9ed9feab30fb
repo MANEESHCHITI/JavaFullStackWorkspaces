@@ -1,0 +1,27 @@
+package collectionsallmethods;
+
+
+class A{
+	public void add(int a,int b) {
+	System.out.println(a+b);
+	}
+	public void add(int a,int b, int c) {
+		System.out.println(a+b+c);
+	}
+	
+}
+public class Road extends A {
+
+//	public static void  add(int a,int b) {
+//		
+//		System.out.println(a+b+"child ");
+//	}
+	public void add(int a,int b) {
+		
+	}
+	public static void main(String args[]) {
+		
+		Road.add(1, 2);
+		add(1,2);
+	}
+}

@@ -1,0 +1,44 @@
+package Collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Pr5 {
+
+	public static void main(String[] args) {
+		
+		ArrayList al=new ArrayList();
+		al.add("maneesh");
+		al.add("amar");
+		al.add("vara");
+		
+		Iterator itr=al.iterator();
+		
+		
+		while(itr.hasNext())
+		{
+			
+			String  v=(String) itr.next();
+			System.out.println(v);
+			
+			if(v.equals("vara"))
+			{
+				itr.remove();                          //remove is used only once in the next .if we use normal remove with object of arrayList in iterator it shows concurrentmodificationexception
+														//if we use remove statement twice after the next  it shows illegalstartexception
+			}
+			
+		}
+		
+		Iterator itr1=al.iterator();
+		
+	//	-----------------                    here vara is removed from above
+		while(itr1.hasNext())
+		{
+			
+			String  v1=(String) itr1.next();
+			System.out.println(v1);
+		}
+
+	}
+
+}

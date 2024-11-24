@@ -1,0 +1,28 @@
+package Demo1;
+
+
+class Scann
+{
+	public void show(int a)
+	{
+		for(int i=1;i<=a;i++)
+		{
+			System.out.println(i);
+		}
+	}
+}
+
+
+
+public class ScannerExample {
+
+	public static void main(String[] args) {
+		Scann obj=new Scann();	
+Scanner s=new Scanner(System.in);
+int value=s.nextInt();
+
+obj.show(value);
+
+	}
+
+}
