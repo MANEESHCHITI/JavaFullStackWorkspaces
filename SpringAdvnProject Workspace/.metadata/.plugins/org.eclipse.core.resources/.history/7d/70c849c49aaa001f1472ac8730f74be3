@@ -1,0 +1,68 @@
+package BeanLIfe.CycleBean;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class UserService implements BeanNameAware, ApplicationContextAware, InitializingBean, DisposableBean {
+
+	private UserRepository userRepository;
+
+	public UserService() {
+		System.out.println("UserService instance created");
+	}
+
+	public void setUserRepository(UserRepository userRepository) {
+		System.out.println("Dependency injected");
+		this.userRepository = userRepository;
+	}
+
+	@Override
+	public void setBeanName(String name) {
+		System.out.println("Bean name" + name);
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		System.out.println("obj we are printing" + applicationContext);
+	}
+
+	@PostConstruct // we want dependency to add for this and also add context tag in bean
+	public void initialize() {
+
+		System.out.println("initialization through @PostConstruct");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("initializing with InitializingBean");
+	}
+	
+	public void init() {
+		System.out.println("initializing with init method");
+	}
+	
+	@PreDestroy
+	public void destroy01(){
+		System.out.println("cleanup with @PreDistroy");
+	}
+	
+	public void destroy02() {
+		System.out.println("cleanup with destroy method");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+
+		System.out.println("cleanup with disposable bean");
+	}
+	
+	
+
+}

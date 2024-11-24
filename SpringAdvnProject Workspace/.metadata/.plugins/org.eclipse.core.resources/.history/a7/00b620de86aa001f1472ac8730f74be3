@@ -1,0 +1,22 @@
+package BeanLIfe.CycleBean;
+
+import org.springframework.beans.factory.BeanNameAware;
+
+public class UserService implements BeanNameAware{
+
+    private UserRepository userRepository ;
+
+    public UserService() {
+        System.out.println("UserService instance created");
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+    	System.out.println("Dependency injected");
+        this.userRepository = userRepository;
+    }
+
+	@Override
+	public void setBeanName(String name) {
+		System.out.println(name);
+	}
+}

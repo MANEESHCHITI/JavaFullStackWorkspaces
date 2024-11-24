@@ -2,8 +2,6 @@ package com.vcube.SpringDiApp2;
 
 public class HelloWorld1 {
 
-	
-
 	private String name;
 	private String message;
 	private int age;

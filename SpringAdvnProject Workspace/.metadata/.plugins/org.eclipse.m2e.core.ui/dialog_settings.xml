@@ -31,13 +31,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="BeanLIfe.CycleBean"/>
 			<item value="LIfeCycle"/>
 			<item value="LIfeCycle.BeanCycle"/>
 		</list>
 		<list key="groupId">
+			<item value="BeanLIfe"/>
 			<item value="LIfeCycle"/>
 		</list>
 		<list key="artifactId">
+			<item value="CycleBean"/>
 			<item value="BeanCycle"/>
 		</list>
 		<list key="projectNameTemplate">

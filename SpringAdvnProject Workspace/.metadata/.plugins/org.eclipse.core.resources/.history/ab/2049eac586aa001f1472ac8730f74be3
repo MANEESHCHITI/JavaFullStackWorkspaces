@@ -1,0 +1,15 @@
+package BeanLIfe.CycleBean;
+
+public class UserService {
+
+    private UserRepository userRepository;
+
+    public UserService() {
+        System.out.println("UserService instance created");
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+    	System.out.println("Dependency injected");
+        this.userRepository = userRepository;
+    }
+}
